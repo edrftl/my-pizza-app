@@ -38,7 +38,7 @@ const CategoryEditPage = () => {
         if (data.image) {
             formData.append("image", data.image);
         }
-        axios.put(`http://localhost:8000/api/categories/${id}`, formData, {
+        axios.post(`http://localhost:8000/api/categories/${id}`, formData, {
             headers: {
                 "Content-Type": "multipart/form-data"
             }
